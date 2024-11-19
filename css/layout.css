@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace, sans-serif;
+  line-height: 1.6;
+}
+
+mark {
+  background-color: black;
+  color: white;
+}
+
+header {
+  background-color: #890000;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Germania One, monospace;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-family: Germania One, monospace;
+}
+
+.nav-links a:hover {
+  background-color: #d30000;
+  border-radius: 20px;
+}
+
+/* Seções */
+.section {
+  padding: 100px;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+/* Seções com imagens de fundo */
+#inicio {
+  background-image: url(road-3840x2160-5k-4k-wallpaper-8k-clouds-sunset-12465.jpg);
+}
+
+
+#f1 {
+  background-image: url(f1car.jpg)
+}
+
+#motogp {
+  background-image: url(motorcycleblur.jpg);
+}
+
+#airrace {
+  background-image: url(redbullairplane.jpg);
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-family: Germania One, monospace;
+}
+
+button {
+  border-radius: 10px;
+  background-color:  #890000;
+}
+
+button a:hover {
+  background-color: #d30000;
+  border-radius: 10px;
+}
+
+
+/* Rodapé */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
