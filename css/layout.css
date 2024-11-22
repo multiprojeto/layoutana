@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -5,17 +7,14 @@
 }
 
 body {
-  font-family: monospace, sans-serif;
-  line-height: 1.6;
-}
-
-mark {
-  background-color: black;
-  color: white;
+  background-color: #ccc;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: #890000;
+  background-color: #2a0244;
   padding: 20px 0;
   position: fixed;
   width: 100%;
@@ -34,12 +33,13 @@ header {
 
 .logo {
   color: white;
-  font-size: 30px;
+  font-size: 54px;
   font-weight: bold;
-  font-family: Germania One, monospace;
-}
+  font-family: "Great Vibes", cursive;
+  }
 
 .logo a {
+  font-family: "Great Vibes", cursive;
   text-decoration: none;
   color: white;
 }
@@ -60,17 +60,15 @@ header {
   padding: 5px 10px;
   display: inline-block;
   transition: transform 0.3s ease;
-  font-family: Germania One, monospace;
 }
 
 .nav-links a:hover {
-  background-color: #d30000;
-  border-radius: 20px;
+  transform: translateY(-20px);
 }
 
 /* Seções */
 .section {
-  padding: 100px;
+  padding: 120px;
   color: white;
   text-align: center;
   background-size: cover;
@@ -80,49 +78,167 @@ header {
   position: relative;
 }
 
-/* Seções com imagens de fundo */
-#inicio {
-  background-image: url(road-3840x2160-5k-4k-wallpaper-8k-clouds-sunset-12465.jpg);
-}
+/*------------------------------------------ NOVIDADES ------------------------------------------*/
 
 
-#f1 {
-  background-image: url(f1car.jpg)
-}
-
-#motogp {
-  background-image: url(motorcycleblur.jpg);
-}
-
-#airrace {
-  background-image: url(redbullairplane.jpg);
-}
-
-button a {
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  padding: 5px 10px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-  font-family: Germania One, monospace;
-}
-
-button {
-  border-radius: 10px;
-  background-color:  #890000;
-}
-
-button a:hover {
-  background-color: #d30000;
-  border-radius: 10px;
-}
 
 
-/* Rodapé */
-footer {
-  background-color: black;
-  color: white;
+
+
+
+/* ------------------------------------CATEGORIAS------------------------------------ */
+
+/* bolinha */
+.category {
+  display: flex; 
+  flex-direction: column; /* imagem acima do texto */
+  align-items: center; 
   text-align: center;
-  padding: 20px 0;
+  height: 200px; 
+  transition: .35s;
+  cursor: pointer;
+}
+
+
+/* imagens dentro das bolinhas */
+.category img {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; /* imagem redonda */
+  object-fit: cover; /* preencher a bolinha sem distorção */
+}
+
+
+@media (max-width: 600px) {
+  .categories {
+      flex-direction: column; 
+      align-items: center; 
+  }
+}
+
+/*------------------------------------------ NOVIDADES ------------------------------------------*/
+
+/* Container para centralizar a linha de cards */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px; /* Espaço extra para que os cards fiquem colados nas laterais */
+}
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* quebra de linha quando o espaço acaba */
+  gap: 30px; /* Espaçamento entre os cards */
+  max-width: 1200px; 
+  margin-top: 0px;
+}
+
+.card {
+  width: 300px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card_content {
+  padding: 20px;
+}
+
+.card_content h4 {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card_content p {
+  font-size: 20px;
+  color: #240202;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .card_container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+/*------------------------------------------RODAPÉ------------------------------------------*/
+
+footer {
+  display: flex; /* flex container */
+  flex-direction: column; 
+  position: relative; /* Necessário para posicionar o h3 */
+  padding: 40px; /* espaçamento interno */
+  background-color: #2a0244; 
+  padding-left: 100px; 
+  padding-right: 100px; 
+
+}
+
+h3 {
+  position: absolute; 
+  top: 20px; 
+  left: 20px; 
+  font-size: 20px; 
+  color: #ffffff; 
+  margin: 0; /* Remove a margem padrão */
+}
+
+.profile-picture-container {
+  display: flex; 
+  justify-content: space-around; /* Espaçamento igual entre os perfis */
+  margin-top: 40px; /* Distância do título até as imagens */
+}
+
+.profile-item {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  color: #ffffff;
+  margin: 0 50px; /* margem lateral entre as imagens */
+}
+
+.profile-picture-container {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 40px; 
+  flex-wrap: wrap; /* Permite que os itens quebrem de linha se necessário */
+}
+
+.profile-picture-container img {
+  width: 80px; 
+  height: 80px; 
+  object-fit: cover; /* Preenche as imagens sem distorção */
+  border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+  footer {
+      padding-left: 20px; 
+      padding-right: 20px; 
+  }
+
+  .profile-item {
+      margin: 0 2px;
+  }
 }
